@@ -10,6 +10,7 @@ class Dataset(ABC):
         self.__fuente = fuente
         self.__datos = None
 
+    # SET / GET
     @property
     def datos(self):
         """metodo publico para devolver atributo privado"""
@@ -21,3 +22,17 @@ class Dataset(ABC):
         if not isinstance(valor, pd.DataFrame):
             raise ValueError("El elemento no es un df de pandas")
         self.__datos = valor
+    
+    @property
+    def fuente(self):
+        """metodo devolver valor protegido """
+        return self.__fuente
+    
+    # METODOS
+    @abstractmethod
+    def cargar_datos(self):
+        """metodo abstracto para cargar los datos, obliga con el decorador a las subclases a implementar este metodo"""
+        pass
+
+    def validar_datos(self):
+        
