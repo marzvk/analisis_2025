@@ -22,4 +22,4 @@ excel.cargar_datos()
 # # llevar a la base de datos
 db = Datasaver()
 db.guardar_df(csv.datos, "Dengue_Dataset_csv")
-db.guardar_df(excel.datos, "Road_Accident_Data_2022.xlsx")
+db.guardar_df(excel.datos, "Road_Accident_Data_2022_xlsx")
