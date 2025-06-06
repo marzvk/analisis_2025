@@ -19,7 +19,7 @@ class DatasetCSV(Dataset):
             self.datos = df
 
             if self.validar_datos():
-                print('va bien')
+                print('iniciando carga a db')
 
         except Exception as e:
             print(f'Error {e} leyendo archivo')
