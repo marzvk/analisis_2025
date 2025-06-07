@@ -22,11 +22,7 @@ class DatasetExcel(Dataset):
                 for col in df.columns:
                     if df[col].dtype == 'O':  # columna con type texto
                         df[col] = df[col].fillna('sin datos')
-
-                        # metodo de pd para ver si es typo numerico
-                    elif pd.api.types.is_numeric_dtype(df[col]):
-                        df[col] = df[col].fillna(0)
-
+                     
                         # para ver si col es de tipo datetime
                     elif pd.api.types.is_datetime64_any_dtype(df[col]):
                         df[col] = df[col].fillna(pd.Timestamp('1900-01-01'))
@@ -36,7 +32,7 @@ class DatasetExcel(Dataset):
             self.datos = df
 
             if self.validar_datos():
-                print('iniciando carga a db')
+                print('iniciando carga a db del excel')
 
         except Exception as e:
             print(f'Error {e} leyendo archivo')
