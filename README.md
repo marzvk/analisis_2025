@@ -4,6 +4,6 @@
 
 ### Como usar (debe tener python instalado):
 1. Clonar este repo
-2. Instalar archivos en requirements
+2. Instalar archivos de requeriments.txt
 3. Ejecutar archivo main.py
 
